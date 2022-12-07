@@ -1,0 +1,164 @@
+<!--<mat-toolbar class="example-toolbar">-->
+
+<!--  <img src="/assets/images/logo.png"/>-->
+<!--<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon class="icon-color">menu</mat-icon></button>-->
+
+<!--<span class="example-spacer"></span>-->
+<!--<button mat-icon-button  aria-label="Example icon-button with heart icon">-->
+<!--  <mat-icon class="example-icon">person_pin</mat-icon>-->
+<!--</button>-->
+<!--<button mat-icon-button aria-label="Example icon-button with heart icon">-->
+<!--  <mat-icon class="example-icon">circle_notifications</mat-icon>-->
+<!--</button>-->
+<!--<button mat-icon-button aria-label="Example icon-button with share icon">-->
+<!--  <mat-icon class="example-icon">help</mat-icon>-->
+<!--</button>-->
+<!--</mat-toolbar>-->
+<!--<mat-sidenav-container autosize>-->
+
+<!--  <mat-sidenav  #sidenav class="example-sidenav mat-elevation-z8" mode="side" opened="true">-->
+<!--    &lt;!&ndash; (mouseenter)="mouseenter()" (mouseleave)="mouseleave()" &ndash;&gt;-->
+
+<!--    <mat-nav-list>-->
+
+<!--      <mat-list-item class="parent">-->
+<!--        <span class="full-width text-size" *ngIf="isExpanded || isShowing">Home</span>-->
+<!--        <mat-icon class="main-button" mat-list-icon>home</mat-icon>-->
+<!--      </mat-list-item>-->
+
+
+<!--      <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">-->
+<!--        <span class="full-width text-size" *ngIf="isExpanded || isShowing">Setups</span>-->
+<!--        <mat-icon class="main-button" mat-list-icon>miscellaneous_services</mat-icon>-->
+<!--        <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>-->
+<!--      </mat-list-item>-->
+
+
+
+<!--      <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="showSubmenu">-->
+<!--        <mat-list-item>-->
+<!--          <a routerLink="organisation" class="full-width sub-size">Organisations</a>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <a routerLink="roles" class="full-width sub-size">Roles&nbsp;Setups</a>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Issue&nbsp;Setups</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <a routerLink="users" class="full-width sub-size">Users</a>-->
+
+<!--        </mat-list-item>-->
+
+
+
+
+
+<!--      </div>-->
+
+
+
+<!--      <mat-list-item (click)="showIssueSubmenu = !showIssueSubmenu" class="parent">-->
+<!--        <span class="full-width text-size" *ngIf="isExpanded || isShowing">Issues</span>-->
+<!--        <mat-icon class="main-button" mat-list-icon>bug_report</mat-icon>-->
+<!--        <mat-icon class="menu-button" [ngClass]="{'rotated' : showIssueSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>-->
+<!--      </mat-list-item>-->
+
+
+
+<!--      <div class="submenu" [ngClass]="{'expanded' : showIssueSubmenu}" *ngIf="showIssueSubmenu">-->
+<!--        <mat-list-item>-->
+<!--          <a routerLink="issue" class="full-width sub-size">New&nbsp;Issue</a>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Open&nbsp;Issues</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Closed&nbsp;Issues</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Priorities</span>-->
+
+<!--        </mat-list-item>-->
+
+
+
+
+
+<!--      </div>-->
+
+<!--      <mat-list-item (click)="showExtrasSubmenu = !showExtrasSubmenu" class="parent">-->
+<!--        <span class="full-width text-size" *ngIf="isExpanded || isShowing">Reports</span>-->
+<!--        <mat-icon class="main-button" mat-list-icon>summarize</mat-icon>-->
+<!--        <mat-icon class="menu-button" [ngClass]="{'rotated' : showIssueSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>-->
+<!--      </mat-list-item>-->
+
+
+
+<!--      <div class="submenu" [ngClass]="{'expanded' : showExtrasSubmenu}" *ngIf="showExtrasSubmenu">-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Issue Reports</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Users Reports</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Other Reports</span>-->
+
+<!--        </mat-list-item>-->
+
+
+
+
+
+
+<!--      </div>-->
+
+<!--      <mat-list-item (click)="showHelpSubmenu = !showHelpSubmenu" class="parent">-->
+<!--        <span class="full-width text-size" *ngIf="isExpanded || isShowing">Help</span>-->
+<!--        <mat-icon class="main-button" mat-list-icon>help</mat-icon>-->
+<!--        <mat-icon class="menu-button" [ngClass]="{'rotated' : showHelpSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>-->
+<!--      </mat-list-item>-->
+
+
+
+<!--      <div class="submenu" [ngClass]="{'expanded' : showHelpSubmenu}" *ngIf="showHelpSubmenu">-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Enquiry</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">User Manuals</span>-->
+
+<!--        </mat-list-item>-->
+<!--        <mat-list-item>-->
+<!--          <span class="full-width sub-size">Chat</span>-->
+
+<!--        </mat-list-item>-->
+
+
+
+
+
+<!--      </div>-->
+
+<!--    </mat-nav-list>-->
+<!--  </mat-sidenav>-->
+
+
+
+<!--  <div class="content mat-elevation-z8">-->
+<!--    &lt;!&ndash;    <app-home></app-home>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <app-organization></app-organization>&ndash;&gt;-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
+
+<!--</mat-sidenav-container>-->

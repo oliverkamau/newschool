@@ -1,0 +1,147 @@
+
+img{
+
+  height: 70px;
+  width: 140px;
+  margin-left: 5px;
+
+}
+
+.bar-spacer {
+  flex: 1 1 auto;
+}
+
+.bar-icon{
+
+  font-size: 30px;
+
+}
+.icon-user{
+
+  font-size: 40px;
+
+}
+
+mat-nav-list{
+  margin-top: 20px;
+}
+mat-list-item{
+  margin-bottom: 10px;
+}
+.full-width {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 50px;
+  color: teal;
+}
+.text-size{
+  font-size: 1.0em;
+  color: white;
+  font-weight: lighter;
+}
+.sub-size{
+  font-size: 0.8em;
+  color: white;
+  font-weight: lighter;
+
+}
+.menu-size{
+  font-weight: lighter;
+
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 40px;
+}
+
+.submenu.expanded {
+  transform: scaleY(1);
+}
+.sub-sub-menu.expanded {
+  transform: scaleY(1);
+}
+/*.example-app-name{*/
+
+/*  margin-left: 20px;*/
+
+/*}*/
+.sub-sub-menu{
+
+  overflow-y: hidden;
+  transition: transform 800ms ease;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  margin-left: 15px;
+
+
+}
+.main-button{
+
+  font-size: 30px;
+
+}
+.icon-color{
+  color: white;
+
+}
+mat-icon{
+  color: white;
+
+}
+.transp{
+  color: #7386D5;
+}
+.sub-men-icon{
+
+  margin-left: 55px;
+}
+.side-chev{
+
+  margin-right: 1px;
+}
+
+
+.tbar {
+  background-color: #7386D5;
+}
+
+.sidenav {
+  margin: 16px;
+  width: auto;
+  border-right: none;
+  background: #7386D5;
+  color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  color: lightgray;
+}
+
+.sidenav-container {
+  height: calc(100vh - 65px);
+}
+/*mat-menu{*/
+
+/*  margin-left: 10px;*/
+/*}*/
+
+
+
