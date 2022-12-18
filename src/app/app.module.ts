@@ -34,6 +34,8 @@ import {LoginService} from "./services/login.service";
 import {UsersComponent} from "./users/users.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatDividerModule} from "@angular/material/divider";
+import { OtpComponent } from './login/otp/otp.component';
+import { ModalComponent } from './modals/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import {MatDividerModule} from "@angular/material/divider";
     LoginComponent,
     HomeComponent,
     UsersComponent,
-    DashboardComponent
+    DashboardComponent,
+    OtpComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

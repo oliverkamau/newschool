@@ -1,3 +1,7 @@
+.login-whole{
+  height: 100%;
+  background-image: url("/assets/images/back.jpg");
+}
 .lay-flex {
   display: flex;
   align-items: center;
@@ -41,11 +45,10 @@
   position: relative;
   top: 2px;
   height: 32em;
-  opacity: 1;
   float: left;
   padding: 60px 50px 40px 50px;
-  width: 300px;
-  background: white;
+  width: 350px;
+  background-color: #5eb345;
   border-radius: 50px;
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -80,6 +83,7 @@
   top: -20px;
   opacity: .8;
   z-index: -1;
+  background-color:#5eb345;
 }
 
 .box:before {
@@ -89,8 +93,10 @@
   border-radius: 10px;
   position: absolute;
   top: -10px;
-  background: rgba(255, 255, 255, .6);
+  background: #5eb345;
   left: 0;
+
+
   transform: scale(.95);
   -webkit-transform: scale(.95);
   -ms-transform: scale(.95);
@@ -113,8 +119,8 @@
 }
 .login-wrapper .btn-block{
   border-radius: 25px;
-  color: #5cb85c;
-  background-color: #5cb85c;
+  color:white;
+  background-color: blue;
   border-color: #4cae4c;
 }
 .login-wrapper mat-card-header {
@@ -136,11 +142,17 @@
 .login-wrapper .mat-stroked-button {
   border: 1px solid currentColor;
   line-height: 54px;
-  background: aliceblue;
+  background: teal;
 }
 
 .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
+  background: aliceblue;
+}
+.login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.8375em 0;
+  background: aliceblue;
+  color: aliceblue;
 }
 .center {
   display: flex;
@@ -151,14 +163,27 @@
   flex-direction: column;
   scrollbar-width: thin;
 }
-::ng-deep .mat-form-field-outline-start {
-  border-radius: 10px 0 0 10px !important;
-  min-width: 10px !important;
-  border-width: 4px;
+.main-button{
+
+  font-size: 20px;
+
 }
 
-::ng-deep .mat-form-field-outline-end {
-  border-radius: 0 10px 10px 0 !important;
-  border-width: 4px;
+/*::ng-deep .mat-form-field-outline-start {*/
+/*  border-radius: 10px 0 0 10px !important;*/
+/*  min-width: 10px !important;*/
+/*  border-width: 4px;*/
+/*}*/
+
+/*::ng-deep .mat-form-field-outline-end {*/
+/*  border-radius: 0 10px 10px 0 !important;*/
+/*  border-width: 4px;*/
+/*}*/
+::ng-deep .mat-form-field-outline {
+  border-radius: 15px 15px 15px 15px !important;
+  min-width: 15px !important;
+  border-width: 15px;
+  border-color: blue;
+  background: white;
 }
 
