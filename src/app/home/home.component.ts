@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router,private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
-
+  this.router.navigate(['home/dashboard'])
   }
 
 

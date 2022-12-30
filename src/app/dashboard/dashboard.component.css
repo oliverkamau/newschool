@@ -1,0 +1,36 @@
+.login-whole{
+  height: 100%;
+}
+.icon-size{
+
+  font-size: 40px;
+
+}
+.tile_count {
+  margin-bottom: 20px;
+  margin-top: 20px
+}
+.box {
+  border-radius: 40px;
+  background-color: ghostwhite;
+}
+.lay-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+.box-graph {
+  background-color: ghostwhite;
+  padding: 5px;
+}
+.dashboard-tab-icon {
+  margin-right: 8px;
+}
+::ng-deep .mat-tab-label {
+  font-size: 20px;
+  font-weight: lighter;
+}
+::ng-deep .mat-tab-label-active {
+  color: #3700B3 !important;
+}

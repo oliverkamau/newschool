@@ -36,6 +36,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatDividerModule} from "@angular/material/divider";
 import { OtpComponent } from './login/otp/otp.component';
 import { ModalComponent } from './modals/modal/modal.component';
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ModalComponent } from './modals/modal/modal.component';
     DashboardComponent,
     OtpComponent,
     ModalComponent
+
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,9 @@ import { ModalComponent } from './modals/modal/modal.component';
     MatDialogModule,
     MatRippleModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatGridListModule,
+    MatTabsModule
 
   ],
   providers: [
