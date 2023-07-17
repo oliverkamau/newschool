@@ -1,1 +1,219 @@
-<p>users works!</p>
+<div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+  <form  #f="ngForm" novalidate
+         class="example-form" (ngSubmit)="f.form.valid && saveIssue(f.value)">
+
+    <div class="content" fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%">
+      <mat-card class="mat-elevation-z8 left-content" style="height: auto">
+        <mat-card-content>
+          <input type="hidden" name="userId" [(ngModel)]="userId">
+          <div fxLayout="row wrap">
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+              <mat-form-field class="example-full-width" color="primary" appearance="outline">
+                <mat-label>First Name</mat-label>
+
+                <input matInput name="userFirstname"
+                       [(ngModel)]="user.userFirstname"
+                       required
+                       #firstname="ngModel" style="font-size: 15px">
+
+                <mat-hint *ngIf="firstname.invalid"> <i style="color: red">firstname is required</i></mat-hint>
+
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px">
+              <mat-label>LastName</mat-label>
+            </div>
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+              <mat-form-field  floatLabel="never" class="example-full-width" color="primary" appearance="outline">
+
+                <input matInput name="userLastname"
+                       [(ngModel)]="user.userLastname"
+                       required
+                       #lastname="ngModel" style="font-size: 15px">
+
+                <mat-hint *ngIf="lastname.invalid"> <i style="color: red">lastname is required</i></mat-hint>
+
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px; margin-top: 1em" >
+              <mat-label>Gender</mat-label>
+            </div>
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px; margin-top: 1em">
+              <mat-form-field appearance="outline" floatLabel="never">
+                <mat-label style="font-size: 14px">Gender</mat-label>
+                <mat-select name="userGender" style="font-size: 14px" [(ngModel)]="user.userGender"
+                            #gender="ngModel" style="font-size: 15px">
+
+                  <mat-option value="Male">Male</mat-option>
+                  <mat-option value="Female">Female</mat-option>
+                  <mat-option value="Other">Other</mat-option>
+
+                </mat-select>
+                <mat-hint *ngIf="gender.invalid"> <i style="color: red">address is required</i></mat-hint>>
+
+              </mat-form-field>
+            </div>
+
+              <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px">
+                <mat-label>Address</mat-label>
+              </div>
+              <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+                <mat-form-field  floatLabel="never" class="example-full-width" color="primary" appearance="outline">
+
+                  <input matInput name="userAddress"
+                         [(ngModel)]="user.userAddress"
+                         required
+                         #address="ngModel" style="font-size: 15px">
+
+                  <mat-hint *ngIf="address.invalid"> <i style="color: red">address is required</i></mat-hint>
+
+                </mat-form-field>
+              </div>
+              <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px">
+                <mat-label>Email</mat-label>
+              </div>
+              <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+                <mat-form-field  floatLabel="never" class="example-full-width" color="primary" appearance="outline">
+
+                  <input matInput name="email"
+                         [(ngModel)]="user.email"
+                         required
+                         #email="ngModel" style="font-size: 15px">
+
+                  <mat-hint *ngIf="email.invalid"> <i style="color: red">email is required</i></mat-hint>
+
+                </mat-form-field>
+              </div>
+              <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px">
+                <mat-label>Telephone</mat-label>
+              </div>
+              <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+                <mat-form-field  floatLabel="never" class="example-full-width" color="primary" appearance="outline">
+
+                  <input matInput name="userPhone"
+                         [(ngModel)]="user.userPhone"
+                         required
+                         #phone="ngModel" style="font-size: 15px">
+
+                  <mat-hint *ngIf="phone.invalid"> <i style="color: red">phone is required</i></mat-hint>
+
+                </mat-form-field>
+              </div>
+
+
+</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="content" fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%">
+      <mat-card class="mat-elevation-z8" style="height: 630px">
+
+        <mat-card-content>
+          <div fxLayout="row wrap">
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px; margin-top: 1em">
+              <mat-label>Teachers</mat-label>
+            </div>
+            <div fxFlex="90%" fxFlex.xs="100%" fxFlex.sm="90%">
+              <ng-multiselect-dropdown
+                name="support"
+                [placeholder]="support"
+                [settings]="dropdownSettings"
+                [data]="supportList"
+                [(ngModel)]="selectedSupport"
+                (onSelect)="onSupportSelect($event)"
+                (onSelectAll)="onSupportSelectAll($event)"
+                (onFilterChange)="getSupport($event)"
+                (onDeSelect)="onItemDeSelect($event)"
+                (onDeSelectAll)="onItemDeSelectAll($event)"
+              >
+              </ng-multiselect-dropdown>
+            </div>
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px; margin-top: 1em">
+              <mat-label>UserType</mat-label>
+            </div>
+            <div fxFlex="90%" fxFlex.xs="100%" fxFlex.sm="90%">
+              <ng-multiselect-dropdown
+                name="support"
+                [placeholder]="support"
+                [settings]="dropdownSettings"
+                [data]="supportList"
+                [(ngModel)]="selectedSupport"
+                (onSelect)="onSupportSelect($event)"
+                (onSelectAll)="onSupportSelectAll($event)"
+                (onFilterChange)="getSupport($event)"
+                (onDeSelect)="onItemDeSelect($event)"
+                (onDeSelectAll)="onItemDeSelectAll($event)"
+              >
+              </ng-multiselect-dropdown>
+            </div>
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px">
+              <mat-label>Username</mat-label>
+            </div>
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+              <mat-form-field  floatLabel="never" class="example-full-width" color="primary" appearance="outline">
+
+                <input matInput name="username"
+                       [(ngModel)]="user.username"
+                       required
+                       #username="ngModel" style="font-size: 15px">
+
+                <mat-hint *ngIf="username.invalid"> <i style="color: red">username is required</i></mat-hint>
+
+              </mat-form-field>
+            </div>
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px">
+              <mat-label>Password</mat-label>
+            </div>
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 11px">
+
+              <mat-form-field  floatLabel="never" class="example-full-width" color="primary" appearance="outline">
+
+                <input matInput name="password"
+                       [(ngModel)]="user.password"
+                       required
+                       #password="ngModel" style="font-size: 15px">
+
+                <mat-hint *ngIf="password.invalid"> <i style="color: red">password is required</i></mat-hint>
+
+              </mat-form-field>
+            </div>
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px; margin-top: 1em">
+              <mat-checkbox (change)="setExternal()">Active?</mat-checkbox>
+            </div>
+
+            <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%" style="font-size: 13px; margin-top: 1em">
+              <mat-label>Reports To</mat-label>
+            </div>
+            <div fxFlex="90%" fxFlex.xs="100%" fxFlex.sm="90%">
+              <ng-multiselect-dropdown
+                name="Supervisor"
+                [placeholder]="support"
+                [settings]="dropdownSettings"
+                [data]="supportList"
+                [(ngModel)]="selectedSupport"
+                (onSelect)="onSupportSelect($event)"
+                (onSelectAll)="onSupportSelectAll($event)"
+                (onFilterChange)="getSupport($event)"
+                (onDeSelect)="onItemDeSelect($event)"
+                (onDeSelectAll)="onItemDeSelectAll($event)"
+              >
+              </ng-multiselect-dropdown>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </form>
+</div>

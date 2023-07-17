@@ -37,6 +37,7 @@ import {MatDividerModule} from "@angular/material/divider";
 import { OtpComponent } from './login/otp/otp.component';
 import { ModalComponent } from './modals/modal/modal.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {NgMultiSelectDropDownModule} from "ng-multiselect-dropdown";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     UsersComponent,
     DashboardComponent,
     OtpComponent,
-    ModalComponent
+    ModalComponent,
 
   ],
   imports: [
@@ -77,7 +78,9 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatSelectModule,
     MatDividerModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    NgMultiSelectDropDownModule.forRoot(),
+    MatRippleModule
 
   ],
   providers: [
